@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width-device-width, initial-scale-1.0">
+    <title>Mohan KB</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <a href="#" class="logo">Portfolio</a>
+        <nav class="navbar">
+            <a href="#" section="home">Home</a>
+            <a href="#" section="about">About</a>
+            <a href="#" section="about">Skills</a>
+            <a href="#" section="about">Experience</a>
+            <a href="#" section="about">Education</a>
+            <a href="#" section="about">Contact</a>
+        </nav>
+    </header>
+    <!-- **************Home Section************************** -->
+    <section id="home" class="home">
+        <div class="home-container">
+            <div class="home-data">
+                <h3>Hello, It's me</h3>
+                <h1>Mohan KB</h1>
+                <h3>And I'm a <Span class="role"></Span></h3>
+                I am a responsible and dedicated individual who is always eager to learn
+                new things. I have successfully completed various complex projects in the past and have over 10+
+                years of experience in the software development field, with numerous achievements to my credit
+            </div>
+            <div class="home-img">
+                <img src="media/profile.jpg">
+            </div>
+        </div>
+        <div class="other-links">
+            <div class="social-container">
+                <a href="https://www.linkedin.com/in/mohankumara-k-b-02681979/" target="_blank" class="social__link">
+                    <i class="bx bxl-linkedin-square social__icon"></i>
+                </a>
+                <a href="https://www.facebook.com/manu.kb3/" target="_blank" class="social__link">
+                    <i class="bx bxl-facebook social__icon"></i>
+                </a>
+                <a href="https://www.instagram.com/manu.kmh/" target="_blank" class="social__link">
+                    <i class="bx bxl-instagram social__icon"></i>
+                </a>
+                <a href="mailto:mohan.kb5473@gmail.com" class="social__link">
+                    <i class="bx bx-envelope home__icon"></i>
+                </a>
+            </div>
+            <div class="more-button">
+                <button class="more-info"
+                    onclick="window.location.href='https://manukmh.pythonanywhere.com/resume';">more about me</button>
+            </div>
+        </div>
+    </section>
+    <!-- **************About Section************************** -->
+    <section id="about" class="about hidden">
+        <div class="about-container">
+            <div class="about-data">
+                <h1><span class="loading"></span></h1>
+            </div>
+        </div>
+    </section>
+    <!-- **************Skills Section************************** -->
+    <!-- <section id="skills" class="skills">
+        <div class="skills-container">
+            <div class="skills-data">
+                <h1><span class="loading"></span></h1>
+            </div>
+        </div>
+    </section> -->
+    <!-- **************Skills Section************************** -->
+     <section id="experience" class="skills hidden">
+        <div class="skills-container">
+            <div class="skills-data">
+                <h1><span class="loading">Under Development ....</span></h1>
+            </div>
+        </div>
+    </section>
+    <div class="color-picker-icon" title="Change the Theme">
+        <i class='bx bxs-palette'></i>
+    </div>
+    <div class="mask" hidden>
+        <div class="color-picker">
+            <div class="grid three-column">
+                <input type="color" id="background-color" name="colorPicker" value="#3498db" />
+                <input type="color" id="font-color" name="colorPicker" value="#3498db" />
+                <input type="color" id="secondary-color" name="colorPicker" value="#3498db" />
+                <div>
+                    <i class='bx bx-edit-alt'></i>
+
+                    <label for="background-color">background-color</label>
+                </div>
+
+                <div>
+                    <i class='bx bx-edit-alt'></i>
+
+                    <label for="font-color">font-color</label>
+                </div>
+
+                <div>
+                    <i class='bx bx-edit-alt'></i>
+                    <label for="secondary-color">secondary-color</label>
+                </div>
+            </div>
+            <div class="bottom-action right">
+                <button class="submit-color-change">Submit</button>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
