@@ -62,8 +62,5 @@ $('.navbar a').click(function(){
     var name = $(this).text();
     $("section").addClass('hidden');
     $("#"+$(this).attr("section")).removeClass('hidden');
-    if(name){
-        $('.logo').text(name);
-    }
 })
 
