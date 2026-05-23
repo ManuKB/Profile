@@ -1,0 +1,192 @@
+/**
+ * Responsive Design CSS
+ * Mobile-first responsive styles
+ */
+
+/* Mobile optimizations */
+@media (max-width: 640px) {
+  h1 {
+    @apply text-2xl;
+  }
+
+  h2 {
+    @apply text-xl;
+  }
+
+  h3 {
+    @apply text-lg;
+  }
+
+  section {
+    @apply py-8;
+  }
+
+  .card {
+    @apply p-4;
+  }
+
+  nav {
+    @apply flex-col;
+  }
+
+  .grid {
+    @apply grid-cols-1;
+  }
+
+  .container {
+    @apply px-4;
+  }
+
+  body {
+    @apply text-sm;
+  }
+
+  button {
+    @apply px-4 py-2;
+  }
+}
+
+/* Tablet optimizations */
+@media (min-width: 641px) and (max-width: 1024px) {
+  h1 {
+    @apply text-3xl;
+  }
+
+  h2 {
+    @apply text-2xl;
+  }
+
+  section {
+    @apply py-12;
+  }
+
+  .grid-responsive {
+    @apply grid-cols-2;
+  }
+
+  .container {
+    @apply max-w-4xl;
+  }
+}
+
+/* Desktop optimizations */
+@media (min-width: 1025px) {
+  h1 {
+    @apply text-5xl;
+  }
+
+  h2 {
+    @apply text-4xl;
+  }
+
+  section {
+    @apply py-24;
+  }
+
+  .grid-responsive {
+    @apply grid-cols-3;
+  }
+
+  .container {
+    @apply max-w-6xl;
+  }
+
+  .hover-scale {
+    @apply transition-transform;
+  }
+
+  .hover-scale:hover {
+    @apply scale-105;
+  }
+}
+
+/* Print styles */
+@media print {
+  nav,
+  .theme-toggle,
+  .scroll-to-top {
+    display: none;
+  }
+
+  body {
+    @apply text-black bg-white;
+  }
+
+  a {
+    @apply text-blue-600;
+  }
+
+  section {
+    break-inside: avoid;
+  }
+
+  * {
+    box-shadow: none !important;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: more) {
+  :root {
+    --text-primary: #000;
+    --text-secondary: #333;
+    --bg-primary: #fff;
+    --border-color: #000;
+  }
+
+  html.dark {
+    --text-primary: #fff;
+    --text-secondary: #e5e5e5;
+    --bg-primary: #000;
+    --border-color: #fff;
+  }
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* Large screens */
+@media (min-width: 1440px) {
+  .container {
+    @apply max-w-7xl;
+  }
+
+  section {
+    @apply py-32;
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+  button,
+  a {
+    @apply p-4;
+  }
+
+  .card {
+    @apply p-6;
+  }
+}
+
+/* Screen reader only content */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Focus visible for keyboard navigation */
+*:focus-visible {
+  @apply outline outline-2 outline-offset-2 outline-blue-500;
+}

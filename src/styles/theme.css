@@ -1,0 +1,224 @@
+/**
+ * Theme Configuration CSS
+ * Dark and light mode styles
+ */
+
+/* Root theme variables */
+:root {
+  /* Light mode colors */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f9fafb;
+  --text-primary: #111827;
+  --text-secondary: #6b7280;
+  --border-color: #e5e7eb;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+html.dark {
+  --bg-primary: #0f172a;
+  --bg-secondary: #1e293b;
+  --text-primary: #f1f5f9;
+  --text-secondary: #cbd5e1;
+  --border-color: #334155;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+}
+
+/* Light mode */
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark mode */
+html.dark body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* Section backgrounds */
+section {
+  transition: background-color 0.3s ease;
+}
+
+html.dark section {
+  --tw-bg-opacity: 1;
+}
+
+/* Text colors */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--text-primary);
+  transition: color 0.3s ease;
+}
+
+p,
+span,
+a {
+  color: var(--text-secondary);
+  transition: color 0.3s ease;
+}
+
+html.dark p,
+html.dark span {
+  color: var(--text-secondary);
+}
+
+/* Card styling */
+.card {
+  background-color: var(--bg-primary);
+  border-color: var(--border-color);
+  box-shadow: var(--shadow-md);
+  transition: all 0.3s ease;
+}
+
+html.dark .card {
+  background-color: #1e293b;
+  border-color: var(--border-color);
+}
+
+/* Button styling */
+.btn {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #3b82f6 0%, #a855f7 100%);
+  color: white;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
+}
+
+html.dark .btn-primary:hover {
+  box-shadow: 0 10px 20px rgba(59, 130, 246, 0.2);
+}
+
+.btn-secondary {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 2px solid #3b82f6;
+}
+
+.btn-secondary:hover {
+  background-color: #dbeafe;
+}
+
+html.dark .btn-secondary:hover {
+  background-color: rgba(59, 130, 246, 0.1);
+}
+
+/* Link styling */
+a {
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #3b82f6;
+}
+
+html.dark a:hover {
+  color: #60a5fa;
+}
+
+/* Input styling */
+input,
+textarea,
+select {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  border-color: var(--border-color);
+  transition: all 0.3s ease;
+}
+
+html.dark input,
+html.dark textarea,
+html.dark select {
+  background-color: #1e293b;
+  color: var(--text-primary);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+html.dark input:focus,
+html.dark textarea:focus,
+html.dark select:focus {
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+/* Badges */
+.badge {
+  background-color: #dbeafe;
+  color: #1e40af;
+}
+
+html.dark .badge {
+  background-color: rgba(59, 130, 246, 0.15);
+  color: #60a5fa;
+}
+
+/* Tables */
+table {
+  border-color: var(--border-color);
+}
+
+th {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
+td {
+  border-color: var(--border-color);
+}
+
+html.dark td {
+  border-color: var(--border-color);
+}
+
+/* Dividers */
+hr {
+  border-color: var(--border-color);
+}
+
+/* Focus visible */
+*:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+html.dark *:focus-visible {
+  outline-color: #60a5fa;
+}
+
+/* Gradient text in dark mode */
+.gradient-text {
+  background: linear-gradient(135deg, #3b82f6 0%, #a855f7 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Smooth transitions for theme changes */
+* {
+  @apply transition-colors duration-300;
+}
+
+/* Disable transitions for animations */
+*[class*='animate-'] {
+  @apply transition-none;
+}
